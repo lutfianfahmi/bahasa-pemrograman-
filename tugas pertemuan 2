@@ -1,0 +1,57 @@
+import java.io.*;
+
+class tugaspertemuan2
+{
+	public static void main (String args[]) 
+		{
+			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+			
+			try {
+			
+			String nama_depan;
+			String nama_belakang;
+			double waktu=0;
+			double kertas=0;
+			
+			System.out.println();
+			System.out.println("=================================");
+			System.out.println("              Warnet             ");
+			System.out.println("          \"Chit Chat\"          ");
+			System.out.println(" Jln Kedung Baruk no 21 Surabaya ");
+			System.out.println("=================================");
+			System.out.println();
+			
+			System.out.print("Inputkan nama depan : "); nama_depan=br.readLine();
+			System.out.print("Inputkan nama belakang : "); nama_belakang=br.readLine();
+			System.out.print("Lama menyewa (menit) : "); 
+			waktu=Double.parseDouble(br.readLine());
+			System.out.print("Jumlah lembar kertas yg diprint : "); 
+			kertas=Double.parseDouble(br.readLine());
+			
+			double sewa_internet=50*waktu;
+			double biaya_print=150*kertas;
+			double total=sewa_internet+biaya_print;
+			
+			System.out.println();
+			System.out.println("=================================");
+			System.out.println("              Warnet             ");
+			System.out.println("          \"Chit Chat\"          ");
+			System.out.println(" Jln Kedung Baruk no 21 Surabaya ");
+			System.out.println("=================================");
+			System.out.println();
+			
+			System.out.println("Nama pelanggan : " +nama_depan + " " +nama_belakang); 
+			System.out.println("Biaya sewa internet (Rp 50/menit) : Rp " +sewa_internet); 
+			System.out.println("Biaya print (Rp 150/lembar) : Rp " +biaya_print);
+			System.out.println("Total bayar : Rp " +total);
+
+ 
+			}
+			catch (Exception e)	
+			{
+			System.out.println(e);
+			}
+			 
+		
+		}		
+}
